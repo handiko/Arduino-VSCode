@@ -45,6 +45,7 @@ const char PROGMEM window[SAMPLES] = {
 
 void writeInfo(int n);
 void multWindow(int n);
+void FFTfilter(int n);
 void convolve(int n);
 void runAnalysis();
 
@@ -78,7 +79,7 @@ void loop()
 
 void writeInfo(int n)
 {
-  const int val[7]={2,4,8,16,32,64,128};
+  const int val[7] = {2, 4, 8, 16, 32, 64, 128};
 
   display.setCursor(0, 0);
   display.setTextSize(1);
@@ -118,6 +119,13 @@ void multWindow(int n)
   }
 }
 
+void FFTfilter(int n)
+{
+  fix_fft(vReal, vImag, n, false);
+  multWindow(n);
+  fix_fft(vReal, vImag, n, true);
+}
+
 void convolve(int n)
 {
   int tempR = 0, tempI = 0;
@@ -140,9 +148,7 @@ void runAnalysis()
   for (int i = 0; i < 7; i++)
   {
     timeFFT = micros();
-    fix_fft(vReal, vImag, i+1, false);
-    multWindow(i + 1);
-    fix_fft(vReal, vImag, i+1, true);
+    FFTfilter(i+1);
     timeFFT = micros() - timeFFT;
 
     timeFIR = micros();
