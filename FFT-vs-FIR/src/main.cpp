@@ -92,7 +92,7 @@ void writeInfo(int n)
   display.print((int)(samplingFrequency / 2));
   display.print("kHz");
   display.print(" ");
-  display.print("uC:UNO");
+  display.print("Board:UNO");
 
   display.setCursor(0, 24);
   display.println("Filter calc time:");
