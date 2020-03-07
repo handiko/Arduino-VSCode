@@ -6,20 +6,22 @@
 
 #include <Arduino.h>
 
+#define DELAY 200
+#define PIN_LED 5
+
 void setup()
 {
-  // initialize LED digital pin as an output.
-  pinMode(LED_BUILTIN, OUTPUT);
+  DDRB = (1 << PIN_LED);
 }
 
 void loop()
 {
   // turn the LED on (HIGH is the voltage level)
-  digitalWrite(LED_BUILTIN, HIGH);
+  PORTB |= (1 << PIN_LED);
   // wait for a second
-  delay(1000);
+  delay(DELAY);
   // turn the LED off by making the voltage LOW
-  digitalWrite(LED_BUILTIN, LOW);
+  PORTB &= ~(1 << PIN_LED);
    // wait for a second
-  delay(1000);
+  delay(DELAY);
 }

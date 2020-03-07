@@ -6,8 +6,8 @@
         {
             "name": "Win32",
             "includePath": [
-                "c:/Users/User/Documents/PlatformIO/Projects/200307-132327-arduino-blink/include",
-                "c:/Users/User/Documents/PlatformIO/Projects/200307-132327-arduino-blink/src",
+                "d:/Arduino-VSCode/Arduino-blink/include",
+                "d:/Arduino-VSCode/Arduino-blink/src",
                 "C:/Users/User/.platformio/packages/framework-arduino-avr/cores/arduino",
                 "C:/Users/User/.platformio/packages/framework-arduino-avr/variants/standard",
                 "C:/Users/User/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
@@ -21,8 +21,8 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "c:/Users/User/Documents/PlatformIO/Projects/200307-132327-arduino-blink/include",
-                    "c:/Users/User/Documents/PlatformIO/Projects/200307-132327-arduino-blink/src",
+                    "d:/Arduino-VSCode/Arduino-blink/include",
+                    "d:/Arduino-VSCode/Arduino-blink/src",
                     "C:/Users/User/.platformio/packages/framework-arduino-avr/cores/arduino",
                     "C:/Users/User/.platformio/packages/framework-arduino-avr/variants/standard",
                     "C:/Users/User/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
