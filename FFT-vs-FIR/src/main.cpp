@@ -88,10 +88,6 @@ void writeInfo(int n)
 
   display.print("FFT/FIR size=");
   display.println(val[n]);
-  display.print("BW=");
-  display.print((int)(samplingFrequency / 2));
-  display.print("kHz");
-  display.print(" ");
   display.print("Board:UNO");
 
   display.setCursor(0, 24);
@@ -160,6 +156,6 @@ void runAnalysis()
     writeInfo(i);
     display.display();
 
-    delay(500);
+    delay(1000);
   }
 }
