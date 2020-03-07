@@ -75,6 +75,10 @@ void drawSpectrum()
     display.print((int)(samplingFrequency/2));
     display.print("Hz");
 
+    display.setCursor(50,24);
+    display.print(micros() - microseconds);
+    display.print("uS");
+
     display.setCursor(0,16);
   }
 
