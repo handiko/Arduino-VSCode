@@ -86,25 +86,25 @@ void writeInfo(int n)
   display.setTextSize(1);
   display.setTextColor(SSD1306_WHITE);
 
-  display.print("FFT/FIR size=");
+  display.print(F("FFT/FIR size="));
   display.println(val[n]);
-  display.print("Board:UNO");
+  display.print(F("Board:UNO"));
 
   display.setCursor(0, 24);
-  display.println("Filter calc time:");
-  display.println(" ");
-  display.print("FFT:");
+  display.println(F("Filter calc time:"));
+  display.println(F(""));
+  display.print(F("FFT:"));
   display.print(timeFFT);
-  display.println("uS");
-  display.print("FIR:");
+  display.println(F("uS"));
+  display.print(F("FIR:"));
   display.print(timeFIR);
-  display.println("uS");
+  display.println(F("uS"));
 
-  display.print("WINNER:");
+  display.print(F("WINNER:"));
   display.print(timeFFT < timeFIR ? "FFT " : "FIR ");
-  display.print("d:");
+  display.print(F("d:"));
   display.print(timeFFT > timeFIR ? (timeFFT - timeFIR) : (timeFIR - timeFFT));
-  display.print("uS");
+  display.print(F("uS"));
 }
 
 void multWindow(int n)

@@ -67,17 +67,18 @@ void drawSpectrum()
     display.setTextSize(1);
     display.setTextColor(SSD1306_WHITE);
   
-    display.print("FFT bins=");
+    display.print(F("FFT bins="));
     display.print(SAMPLES);
 
     display.setCursor(0,8);
-    display.print("Start=0Hz Stop=");
+    display.print(F("Start=0Hz Stop="));
     display.print((int)(samplingFrequency/2));
-    display.print("Hz");
+    display.print(F("Hz"));
 
-    display.setCursor(50,24);
-    display.print(micros() - microseconds);
-    display.print("uS");
+    display.setCursor(40,24);
+    display.print(F("Spectrum"));
+    //display.print(micros() - microseconds);
+    //display.print("uS");
 
     display.setCursor(0,16);
   }
