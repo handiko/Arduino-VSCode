@@ -22,8 +22,8 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 char vReal[SAMPLES];
 char vImag[SAMPLES];
-const double samplingFrequency = 10000; 
-unsigned int sampling_period_us;
+const double samplingFrequency = 5000; 
+unsigned int sampling_period_us;           
 unsigned long microseconds;
 
 void drawSpectrum();
@@ -42,7 +42,7 @@ void loop() {
   microseconds = micros();
   for(int i=0; i<SAMPLES; i++)
   {
-      vReal[i] = analogRead(A0)*128/1024;
+      vReal[i] = analogRead(A0); //*128/1024;
       vImag[i] = 0;
       while(micros() - microseconds < sampling_period_us){
         //empty loop
